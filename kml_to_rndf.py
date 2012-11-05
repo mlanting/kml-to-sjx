@@ -40,7 +40,7 @@ def process_kml(kml_root, outFile=None):
     return segments
 
 def get_rndf_lines(segments):
-    output_lines = ["RNDF_name back_40_one_way_rndf.txt",
+    output_lines = ["RNDF_name TestTrackDemoRNDFrev1",
                     "num_segments " + str(len(segments)),
                     "num_zones 0",
                     "format_version 1",
@@ -53,7 +53,7 @@ def get_rndf_lines(segments):
         lane_num = str(seg_num) + ".1"
         output_lines.extend(["",
                              "segment " + seg_num,
-                             "name " + name,
+                             "segment_name " + name,
                              "num_lanes 1",
                              "lane " + lane_num,
                              "num_waypoints " + str(len(seg[1]))
